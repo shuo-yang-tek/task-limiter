@@ -1,10 +1,14 @@
+How To Use
+---
 ```js
 const taskLimiter = require('task-limiter');
 
 taskLimiter.createLimiter(
-   'name',     // name of limiter (unique)
-   'queue',    // 'queue' (default) or 'stack'
-   1           // max count of running task at same time (default: 1)
+   'name',              // name of limiter (unique)
+   {
+      type: 'queue',    // 'queue' or 'statck' (default: 'queue')
+      size: 1           // max count of running task at same time (default: 1)
+   }
 );
 
 async function someAsyncFunc() {

@@ -2,14 +2,15 @@ const Limiter = require('./limiter');
 
 const limiters = {};
 
-function createLimiter(name, type, size) {
+function createLimiter(name, opts) {
    if( !name )
       throw new Error('limiter name is required');
 
    if( limiters[name] )
       throw new Error(`limiter ${name} exists`);
 
-   limiters[name] = new Limiter(type, size);
+   opts = opts || {};
+   limiters[name] = new Limiter(opts.type, opts.size);
 }
 
 function join(name) {
