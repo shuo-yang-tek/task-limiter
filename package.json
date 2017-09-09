@@ -1,0 +1,8 @@
+{
+   "name": "task-limiter",
+   "version": "1.0.0",
+   "main": "src/index.js",
+   "repository": "https://github.com/shuo-yang-tek/task-limiter.git",
+   "author": "Shuo Yang <shuo.yang.tek@gmail.com>",
+   "license": "MIT"
+}
