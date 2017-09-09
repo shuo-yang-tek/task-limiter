@@ -6,7 +6,7 @@ const taskLimiter = require('task-limiter');
 taskLimiter.createLimiter(
    'name',              // name of limiter (unique)
    {
-      type: 'queue',    // 'queue' or 'statck' (default: 'queue')
+      type: 'queue',    // 'queue' or 'stack' (default: 'queue')
       size: 1           // max count of running task at same time (default: 1)
    }
 );
